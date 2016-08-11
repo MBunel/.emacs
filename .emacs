@@ -51,7 +51,7 @@
  '(nlinum-format " %d ")
  '(package-selected-packages
    (quote
-    (sphinx-doc python-docstring neotree django-manage drag-stuff web-mode tabbar-ruler nlinum company-jedi company-quickhelp elpy yasnippet django-mode ess-view markdown-preview-mode markdown-mode+ markdown-mode mc-extras multiple-cursors json-mode ess-R-data-view undohist undo-tree auctex-latexmk auctex-lua auctex solarized-theme csv-mode magit)))
+    (auto-complete-auctex sphinx-doc python-docstring neotree django-manage drag-stuff web-mode tabbar-ruler nlinum company-jedi company-quickhelp elpy yasnippet django-mode ess-view markdown-preview-mode markdown-mode+ markdown-mode mc-extras multiple-cursors json-mode ess-R-data-view undohist undo-tree auctex-latexmk auctex-lua auctex solarized-theme csv-mode magit)))
  '(python-shell-interpreter "python3")
  '(pyvenv-virtualenvwrapper-python "/usr/bin/python3")
  '(sublimity-mode t))
@@ -62,6 +62,7 @@
  ;; If there is more than one, they won't work right.
  '(company-tooltip-selection ((t (:background "#fdf6e3" :foreground "#00736F" :inverse-video t))))
  '(linum ((t (:background "#eee8d5" :foreground "#93a1a1" :strike-through nil :overline nil :underline nil :slant italic))))
+ '(mc/cursor-bar-face ((t (:height 2 :background "#657b83"))))
  '(neo-dir-link-face ((t (:foreground "#268bd2"))))
  '(neo-file-link-face ((t nil)))
  '(neo-header-face ((t (:foreground "#dc322f"))))
@@ -226,5 +227,13 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer) ;; remplace buffermenu
 
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;; Configuration AUCteX
+
+;; autocompletion
+(require 'auto-complete-auctex)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
