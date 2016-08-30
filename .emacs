@@ -228,6 +228,6 @@
 ;;; Configuration AUCteX
 
 ;; autocompletion
-(require 'auto-complete-auctex)
+;; (require 'auto-complete-auctex)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
