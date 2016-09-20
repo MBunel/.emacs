@@ -27,7 +27,7 @@
  '(ess-default-style (quote GNU) nil nil "Définition de l'indentation pour ess")
  '(global-hl-line-mode t)
  '(global-magit-file-mode t)
- '(global-nlinum-mode t nil nil "Activation du dénombrement des lignes")
+ '(global-nlinum-mode t)
  '(global-whitespace-mode nil)
  '(inferior-R-font-lock-keywords
    (quote
@@ -51,7 +51,7 @@
  '(nlinum-format " %d ")
  '(package-selected-packages
    (quote
-    (auto-complete-auctex sphinx-doc python-docstring neotree django-manage drag-stuff web-mode tabbar-ruler nlinum company-jedi company-quickhelp elpy yasnippet django-mode ess-view markdown-preview-mode markdown-mode+ markdown-mode mc-extras multiple-cursors json-mode ess-R-data-view undohist undo-tree auctex-latexmk auctex-lua auctex solarized-theme csv-mode magit)))
+    (js-doc auto-complete-auctex sphinx-doc python-docstring neotree django-manage drag-stuff web-mode tabbar-ruler nlinum company-jedi company-quickhelp elpy yasnippet django-mode ess-view markdown-preview-mode markdown-mode+ markdown-mode mc-extras multiple-cursors json-mode ess-R-data-view undohist undo-tree auctex-latexmk auctex-lua auctex solarized-theme csv-mode magit)))
  '(python-shell-interpreter "python3")
  '(pyvenv-virtualenvwrapper-python "/usr/bin/python3")
  '(sublimity-mode t))
