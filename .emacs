@@ -27,7 +27,6 @@
  '(ess-default-style (quote GNU) nil nil "Définition de l'indentation pour ess")
  '(global-hl-line-mode t)
  '(global-magit-file-mode t)
- '(global-nlinum-mode t)
  '(global-whitespace-mode nil)
  '(inferior-R-font-lock-keywords
    (quote
@@ -231,3 +230,14 @@
 ;; (require 'auto-complete-auctex)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;; Configuration js2
+
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; nlinum mode
+
+(global-nlinum-mode 1)
