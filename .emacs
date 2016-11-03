@@ -72,6 +72,7 @@
  '(tabbar-default ((t (:inherit variable-pitch :height 0.8))))
  '(tabbar-highlight ((t nil)))
  '(tabbar-modified ((t (:inherit tabbar-default :foreground "#dc322f"))))
+ '(tabbar-selected ((t (:inherit tabbar-default :foreground "#268bd2" :weight semi-bold))))
  '(tabbar-selected ((t (:inherit tabbar-default :foreground "#268bd2"))))
  '(tabbar-unselected ((t (:inherit tabbar-default)))))
 
