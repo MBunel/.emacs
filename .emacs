@@ -53,7 +53,8 @@
     (js-doc auto-complete-auctex sphinx-doc python-docstring neotree django-manage drag-stuff web-mode tabbar-ruler nlinum company-jedi company-quickhelp elpy yasnippet django-mode ess-view markdown-preview-mode markdown-mode+ markdown-mode mc-extras multiple-cursors json-mode ess-R-data-view undohist undo-tree auctex-latexmk auctex-lua auctex solarized-theme csv-mode magit)))
  '(python-shell-interpreter "python3")
  '(pyvenv-virtualenvwrapper-python "/usr/bin/python3")
- '(sublimity-mode t))
+ '(sublimity-mode t)
+ '(tabbar-separator (quote (1))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
