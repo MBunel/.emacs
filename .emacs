@@ -1,28 +1,6 @@
 ;;;; Emacs.el 11/08/2016
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;; powerline
-
-(require 'powerline)
-(require 'airline-themes)
-(load-theme 'solarized-light-perso2)
-(load-theme 'airline-solarized-gui2)
-
-;; Définition des fontes
-(setq powerline-utf-8-separator-left        #xe0b0
-      powerline-utf-8-separator-right       #xe0b2
-      airline-utf-glyph-separator-left      #xe0b0
-      airline-utf-glyph-separator-right     #xe0b2
-      airline-utf-glyph-subseparator-left   #xe0b1
-      airline-utf-glyph-subseparator-right  #xe0b3
-      airline-utf-glyph-branch              #xe0a0
-      airline-utf-glyph-readonly            #xe0a2
-      airline-utf-glyph-linenumber          #xe0a1)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 
 ;;; Variable customs
 (custom-set-variables
@@ -39,9 +17,10 @@
  '(company-quickhelp-mode t)
  '(company-tooltip-limit 15)
  '(cursor-type (quote bar))
+ '(custom-enabled-themes (quote (solarized-light-perso)))
  '(custom-safe-themes
    (quote
-    ("b181ea0cc32303da7f9227361bb051bbb6c3105bb4f386ca22a06db319b08882" "ecd91f70bed9d04d3ad858ab595a9c8a95edab465d56737dbaed62da354a4548" "6550b0dd516b329e5fca69f1527345439a157cdb07502c08be0f3612173024a2" "158013ec40a6e2844dbda340dbabda6e179a53e0aea04a4d383d69c329fba6e6" "946e871c780b159c4bb9f580537e5d2f7dba1411143194447604ecbaf01bd90c" "e115d9e5d2b8c2f94237bd9db4b22ba001466f8b844d8f924b3c6c25877ea552" "560c8751063c209b6145d226631d3e4cb38c99cd11cd3b587c576c1803244f12" "e12809c4eb749bcc279ad02f9db55c53e098e723a72d525f466e638034d043dd" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
+    ("962dacd99e5a99801ca7257f25be7be0cebc333ad07be97efd6ff59755e6148f" "b181ea0cc32303da7f9227361bb051bbb6c3105bb4f386ca22a06db319b08882" "ecd91f70bed9d04d3ad858ab595a9c8a95edab465d56737dbaed62da354a4548" "6550b0dd516b329e5fca69f1527345439a157cdb07502c08be0f3612173024a2" "158013ec40a6e2844dbda340dbabda6e179a53e0aea04a4d383d69c329fba6e6" "946e871c780b159c4bb9f580537e5d2f7dba1411143194447604ecbaf01bd90c" "e115d9e5d2b8c2f94237bd9db4b22ba001466f8b844d8f924b3c6c25877ea552" "560c8751063c209b6145d226631d3e4cb38c99cd11cd3b587c576c1803244f12" "e12809c4eb749bcc279ad02f9db55c53e098e723a72d525f466e638034d043dd" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
  '(drag-stuff-global-mode t nil nil "Activation de drag stuff")
  '(elpy-rpc-backend "jedi")
  '(elpy-rpc-python-command "python3" nil nil "Configuration de la version de python pour elpy")
@@ -273,5 +252,26 @@
 ;;; undo tree
 
 (global-undo-tree-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;; powerline
+
+(require 'powerline)
+(require 'airline-themes)
+(powerline-default-theme)
+;;(load-theme 'airline-light)
+
+;; Définition des fontes
+(setq powerline-utf-8-separator-left        #xe0b0
+      powerline-utf-8-separator-right       #xe0b2
+      airline-utf-glyph-separator-left      #xe0b0
+      airline-utf-glyph-separator-right     #xe0b2
+      airline-utf-glyph-subseparator-left   #xe0b1
+      airline-utf-glyph-subseparator-right  #xe0b3
+      airline-utf-glyph-branch              #xe0a0
+      airline-utf-glyph-readonly            #xe0a2
+      airline-utf-glyph-linenumber          #xe0a1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
