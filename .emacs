@@ -54,6 +54,9 @@
     (js-doc auto-complete-auctex sphinx-doc python-docstring neotree django-manage drag-stuff web-mode tabbar-ruler nlinum company-jedi company-quickhelp elpy yasnippet django-mode ess-view markdown-preview-mode markdown-mode+ markdown-mode mc-extras multiple-cursors json-mode ess-R-data-view undohist undo-tree auctex-latexmk auctex-lua auctex solarized-theme csv-mode magit)))
  '(python-shell-interpreter "python3")
  '(pyvenv-virtualenvwrapper-python "/usr/bin/python3")
+ '(rainbow-html-colors-major-mode-list
+   (quote
+    (html-mode css-mode php-mode nxml-mode xml-mode scss-mode web-mode)))
  '(sublimity-mode t)
  '(tabbar-separator (quote (1))))
 (custom-set-faces
@@ -275,5 +278,16 @@
       airline-utf-glyph-linenumber          #xe0a1)
 
 (airline-themes-set-modeline)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;; rainbow-mode
+
+(require 'rainbow-mode)
+
+(add-hook 'web-mode-hook 'rainbow-mode)
+(add-hook 'css-mode-hook 'rainbow-mode)
+(add-hook 'scss-mode-hook 'rainbow-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
