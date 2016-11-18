@@ -51,14 +51,16 @@
  '(nlinum-format " %d ")
  '(package-selected-packages
    (quote
-    (js-doc auto-complete-auctex sphinx-doc python-docstring neotree django-manage drag-stuff web-mode tabbar-ruler nlinum company-jedi company-quickhelp elpy yasnippet django-mode ess-view markdown-preview-mode markdown-mode+ markdown-mode mc-extras multiple-cursors json-mode ess-R-data-view undohist undo-tree auctex-latexmk auctex-lua auctex solarized-theme csv-mode magit)))
+    (ess auto-complete js-doc auto-complete-auctex sphinx-doc python-docstring neotree django-manage drag-stuff web-mode tabbar-ruler nlinum company-jedi company-quickhelp elpy yasnippet django-mode ess-view markdown-preview-mode markdown-mode+ markdown-mode mc-extras multiple-cursors json-mode ess-R-data-view undohist undo-tree auctex-latexmk auctex-lua auctex solarized-theme csv-mode magit)))
  '(python-shell-interpreter "python3")
  '(pyvenv-virtualenvwrapper-python "/usr/bin/python3")
  '(rainbow-html-colors-major-mode-list
    (quote
     (html-mode css-mode php-mode nxml-mode xml-mode scss-mode web-mode)))
  '(sublimity-mode t)
- '(tabbar-separator (quote (1))))
+ '(tabbar-separator (quote (1)))
+ '(twittering-new-tweets-hook nil)
+ '(twittering-use-icon-storage t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -255,6 +257,8 @@
 ;;; undo tree
 
 (global-undo-tree-mode)
+(setq undo-tree-visualizer-timestamps t)
+(setq undo-tree-visualizer-diff t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -289,5 +293,37 @@
 (add-hook 'web-mode-hook 'rainbow-mode)
 (add-hook 'css-mode-hook 'rainbow-mode)
 (add-hook 'scss-mode-hook 'rainbow-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;; twitter mode
+
+;; (require 'twittering-mode)
+
+;; (setq twittering-use-master-password t)
+
+;; ;;(setq twittering-icon-mode f)
+;; (setq twittering-timer-interval 300)
+;; (setq twittering-url-show-status nil)
+
+;; ;; notification de réception
+;; ;; (add-hook 'twittering-new-tweets-hook (lambda ()
+;; ;;    (let ((n twittering-new-tweets-count))
+;; ;;      (start-process "twittering-notify" nil "notify-send"
+;; ;;                     "-i" "/usr/share/pixmaps/gnome-emacs.png"
+;; ;;                     "Tweets reçus"
+;; ;;                     (format "%d tweet%s"
+;; ;;                             n (if (> n 1) "s" ""))))))
+
+;; ;; correction orthographe
+;; (add-hook 'twittering-edit-mode-hook (lambda () (ispell-minor-mode)
+;; 				       (flyspell-mode)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;; auto complete
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
