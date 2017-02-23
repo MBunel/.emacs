@@ -1,4 +1,4 @@
-;;;; Emacs.el 11/08/2016
+;;;; Emacs.el 23/02/2017
 
 
 
@@ -52,6 +52,8 @@
  '(package-selected-packages
    (quote
     (ess auto-complete js-doc auto-complete-auctex sphinx-doc python-docstring neotree django-manage drag-stuff web-mode tabbar-ruler nlinum company-jedi company-quickhelp elpy yasnippet django-mode ess-view markdown-preview-mode markdown-mode+ markdown-mode mc-extras multiple-cursors json-mode ess-R-data-view undohist undo-tree auctex-latexmk auctex-lua auctex solarized-theme csv-mode magit)))
+ '(powerline-default-separator nil)
+ '(powerline-display-hud nil)
  '(python-shell-interpreter "python3")
  '(pyvenv-virtualenvwrapper-python "/usr/bin/python3")
  '(rainbow-html-colors-major-mode-list
@@ -212,7 +214,7 @@
 
 ;;; Configuration ido
 
-;;; meilleure navigation dans les buffers 
+;;; meilleure navigation dans les buffers
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 (ido-mode 1)
@@ -223,7 +225,7 @@
 
 ;;; Configuration ibuffer
 
-(require 'ibuffer) 
+(require 'ibuffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer) ;; remplace buffermenu
 
 
@@ -325,5 +327,17 @@
 
 ;;; auto complete
 
+;; (require 'auto-complete)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;; auto complete
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;; Enlève la barre de défilement
+(scroll-bar-mode -1)
