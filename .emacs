@@ -1,4 +1,4 @@
-;;;; Emacs.el 23/02/2017
+;;;; Emacs.el 16/03/2017
 
 
 
@@ -51,7 +51,7 @@
  '(nlinum-format " %d ")
  '(package-selected-packages
    (quote
-    (ess auto-complete js-doc auto-complete-auctex sphinx-doc python-docstring neotree django-manage drag-stuff web-mode tabbar-ruler nlinum company-jedi company-quickhelp elpy yasnippet django-mode ess-view markdown-preview-mode markdown-mode+ markdown-mode mc-extras multiple-cursors json-mode ess-R-data-view undohist undo-tree auctex-latexmk auctex-lua auctex solarized-theme csv-mode magit)))
+    (smex ess auto-complete js-doc auto-complete-auctex sphinx-doc python-docstring neotree django-manage drag-stuff web-mode tabbar-ruler nlinum company-jedi company-quickhelp elpy yasnippet django-mode ess-view markdown-preview-mode markdown-mode+ markdown-mode mc-extras multiple-cursors json-mode ess-R-data-view undohist undo-tree auctex-latexmk auctex-lua auctex solarized-theme csv-mode magit)))
  '(powerline-default-separator nil)
  '(powerline-display-hud nil)
  '(python-shell-interpreter "python3")
@@ -89,7 +89,6 @@
 
 
 ;;; Configuration du package-manager
-
 (require 'package)
 
 ;; Ajout de l'url de melpa à la liste des dépots
@@ -102,38 +101,23 @@
 (package-initialize)
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
 ;;; Configuration de multi-cursors
-
 (require 'multiple-cursors)
 
 ;; Définition des commandes de placement
-
-
 ;; To override a mouse event, you will likely have to also unbind the down-mouse part of the event.
   (global-unset-key (kbd "C-<down-mouse-1>"))
 ;; C-click pose un curseur
   (global-set-key (kbd "C-<mouse-1>") 'mc/add-cursor-on-click)
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
 ;;; Configuration ESS
-
-
 (add-hook 'R-mode-hook (require 'ess-view)) ;; Utilisation des hooks
 ;; fournis par ess. on charge le package ess-view seulement quand ess
 ;; se lance. Bon à priori ça marche pas :(
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
 ;;; Configuration elpy
-
 (package-initialize)
 (elpy-enable)
 (company-quickhelp-mode 1)
@@ -144,37 +128,21 @@
 (add-hook 'python-mode-hook 'my/python-mode-hook)
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
 ;;; Configuration tabbar
-
 (tabbar-mode 1)
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
 ;;; Configuration drag stuff
-
 (require 'drag-stuff)
 (drag-stuff-global-mode 1)
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
 ;;; Configuration neotree
-
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
 ;;; Configuration webmode
-
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
@@ -191,82 +159,58 @@
 (setq web-mode-enable-current-element-highlight t)
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 
 ;;; Configuration sphinx-doc
-
 (add-hook 'python-mode-hook (lambda ()
 			      (require 'sphinx-doc)
 			      (sphinx-doc-mode t)))
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
 ;;; Configuration savehist
-;;; Sauvegarde de l'historique entre sessions
+;;; Sauvegarde de l'historique entre Configuration
 (savehist-mode 1)
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
-;;; Configuration ido
-
+;;; sessions ido
 ;;; meilleure navigation dans les buffers
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 (ido-mode 1)
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Configuration smex
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+;; limited to commands that are relevant to the active major mode
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
 
 ;;; Configuration ibuffer
-
 (require 'ibuffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer) ;; remplace buffermenu
 
 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
 ;;; Configuration AUCteX
-
 ;; autocompletion
 ;; (require 'auto-complete-auctex)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 
 ;;; Configuration js2
-
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 ;;(add-hook 'js2-mode-hook 'ac-js2-mode)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 
 ;;; nlinum mode
-
 (global-nlinum-mode 1)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 ;;; undo tree
-
 (global-undo-tree-mode)
 (setq undo-tree-visualizer-timestamps t)
 (setq undo-tree-visualizer-diff t)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 
 ;;; powerline
-
 (require 'powerline)
 (require 'airline-themes)
 (powerline-default-theme)
@@ -285,58 +229,17 @@
 
 (airline-themes-set-modeline)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 
 ;;; rainbow-mode
-
 (require 'rainbow-mode)
 
 (add-hook 'web-mode-hook 'rainbow-mode)
 (add-hook 'css-mode-hook 'rainbow-mode)
 (add-hook 'scss-mode-hook 'rainbow-mode)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-
-;;; twitter mode
-
-;; (require 'twittering-mode)
-
-;; (setq twittering-use-master-password t)
-
-;; ;;(setq twittering-icon-mode f)
-;; (setq twittering-timer-interval 300)
-;; (setq twittering-url-show-status nil)
-
-;; ;; notification de réception
-;; ;; (add-hook 'twittering-new-tweets-hook (lambda ()
-;; ;;    (let ((n twittering-new-tweets-count))
-;; ;;      (start-process "twittering-notify" nil "notify-send"
-;; ;;                     "-i" "/usr/share/pixmaps/gnome-emacs.png"
-;; ;;                     "Tweets reçus"
-;; ;;                     (format "%d tweet%s"
-;; ;;                             n (if (> n 1) "s" ""))))))
-
-;; ;; correction orthographe
-;; (add-hook 'twittering-edit-mode-hook (lambda () (ispell-minor-mode)
-;; 				       (flyspell-mode)))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
-;;; auto complete
-
-;; (require 'auto-complete)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
-;;; auto complete
-
+;;; hook suppression espaces
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 ;;; Enlève la barre de défilement
