@@ -114,7 +114,7 @@
 ;;; Configuration ESS
 (add-hook 'R-mode-hook (require 'ess-view)) ;; Utilisation des hooks
 ;; fournis par ess. on charge le package ess-view seulement quand ess
-;; se lance. Bon à priori ça marche pas :(
+;; se lance.
 
 
 ;;; Configuration elpy
