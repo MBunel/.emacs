@@ -144,7 +144,7 @@
 
 ;;; Configuration webmode
 (require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[x]html?\\'" . web-mode))
 
 (setq web-mode-engines-alist '(("django" . "\\.html\\'")))
 
@@ -244,3 +244,6 @@
 
 ;;; Enlève la barre de défilement
 (scroll-bar-mode -1)
+
+;;; Configuration tramp
+(setq tramp-default-method "ssh")
