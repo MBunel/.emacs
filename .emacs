@@ -45,13 +45,29 @@
      (ess-fl-keyword:delimiters . t)
      (ess-fl-keyword:= . t)
      (ess-R-fl-keyword:F&T . t))))
+ '(inferior-ess-r-font-lock-keywords
+   (quote
+    ((ess-S-fl-keyword:prompt . t)
+     (ess-R-fl-keyword:messages . t)
+     (ess-R-fl-keyword:modifiers . t)
+     (ess-R-fl-keyword:fun-defs . t)
+     (ess-R-fl-keyword:keywords . t)
+     (ess-R-fl-keyword:assign-ops . t)
+     (ess-R-fl-keyword:constants . t)
+     (ess-fl-keyword:matrix-labels . t)
+     (ess-fl-keyword:fun-calls . t)
+     (ess-fl-keyword:numbers . t)
+     (ess-fl-keyword:operators . t)
+     (ess-fl-keyword:delimiters . t)
+     (ess-fl-keyword:= . t)
+     (ess-R-fl-keyword:F&T . t))))
  '(jedi:server-command
    (quote
     ("python3" "/home/mattia/.emacs.d/elpa/jedi-core-20160501.2043/jediepcserver.py")))
  '(nlinum-format " %d ")
  '(package-selected-packages
    (quote
-    (smex ess auto-complete js-doc auto-complete-auctex sphinx-doc python-docstring neotree django-manage drag-stuff web-mode tabbar-ruler nlinum company-jedi company-quickhelp elpy yasnippet django-mode ess-view markdown-preview-mode markdown-mode+ markdown-mode mc-extras multiple-cursors json-mode ess-R-data-view undohist undo-tree auctex-latexmk auctex-lua auctex solarized-theme csv-mode magit)))
+    (ac-html smex ess auto-complete js-doc auto-complete-auctex sphinx-doc python-docstring neotree django-manage drag-stuff web-mode tabbar-ruler nlinum company-jedi company-quickhelp elpy yasnippet django-mode ess-view markdown-preview-mode markdown-mode+ markdown-mode mc-extras multiple-cursors json-mode ess-R-data-view undohist undo-tree auctex-latexmk auctex-lua auctex solarized-theme csv-mode magit)))
  '(powerline-default-separator nil)
  '(powerline-display-hud nil)
  '(python-shell-interpreter "python3")
@@ -87,6 +103,9 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+
+;; Configuration ac
+(ac-config-default)
 
 ;;; Configuration du package-manager
 (require 'package)
@@ -158,7 +177,11 @@
 
 (setq web-mode-enable-current-element-highlight t)
 
-
+;; (setq web-mode-ac-sources-alist
+;;   '(("css" . (ac-source-css-property))
+;;     ("html" . (ac-source-html-tag
+;; 		  ac-source-html-attr
+;; 		  ac-source-html-attrv))))
 
 ;;; Configuration sphinx-doc
 (add-hook 'python-mode-hook (lambda ()
@@ -197,7 +220,8 @@
 
 ;;; Configuration js2
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-;;(add-hook 'js2-mode-hook 'ac-js2-mode)
+
+;; (add-hook 'js2-mode-hook 'ac-js2-mode)
 
 
 ;;; nlinum mode
