@@ -1,4 +1,4 @@
-;;;; Emacs.el 16/03/2017
+;;;; Emacs.el 08/06/2017
 
 
 
@@ -67,7 +67,7 @@
  '(nlinum-format " %d ")
  '(package-selected-packages
    (quote
-    (ac-html smex ess auto-complete js-doc auto-complete-auctex sphinx-doc python-docstring neotree django-manage drag-stuff web-mode tabbar-ruler nlinum company-jedi company-quickhelp elpy yasnippet django-mode ess-view markdown-preview-mode markdown-mode+ markdown-mode mc-extras multiple-cursors json-mode ess-R-data-view undohist undo-tree auctex-latexmk auctex-lua auctex solarized-theme csv-mode magit)))
+    (flycheck ac-html smex ess auto-complete js-doc auto-complete-auctex sphinx-doc python-docstring neotree django-manage drag-stuff web-mode tabbar-ruler nlinum company-jedi company-quickhelp elpy yasnippet django-mode ess-view markdown-preview-mode markdown-mode+ markdown-mode mc-extras multiple-cursors json-mode ess-R-data-view undohist undo-tree auctex-latexmk auctex-lua auctex solarized-theme csv-mode magit)))
  '(powerline-default-separator nil)
  '(powerline-display-hud nil)
  '(python-shell-interpreter "python3")
@@ -105,7 +105,7 @@
 
 
 ;; Configuration ac
-(ac-config-default)
+;;(ac-config-default)
 
 ;;; Configuration du package-manager
 (require 'package)
@@ -271,3 +271,13 @@
 
 ;;; Configuration tramp
 (setq tramp-default-method "ssh")
+
+;;; Configuration flycheck
+(load-file "~/.emacs.d/manual-install/flycheck-grammalecte/flycheck-grammalecte.el")
+
+(defun flycheck-gramalecte ()
+  (flycheck-select-checker 'francais-grammalecte)
+  (flycheck-mode))
+
+;;; Configuration org
+(add-hook 'org-mode-hook 'flycheck-gramalecte)
