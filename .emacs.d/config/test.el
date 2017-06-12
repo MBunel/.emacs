@@ -1,18 +1,4 @@
 
-;;; Configuration du package-manager
-(require 'package)
-
-;; Ajout de l'url de melpa à la liste des dépots
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
-(when (< emacs-major-version 24)
-  ;; For important compatibility libraries like cl-lib
-  (add-to-list 'package-archives '("rDOCTYgnu" . "http://elpa.gnu.org/packages/")))
-
-(package-initialize)
-
-
-
 ;;; Configuration tabbar
 (tabbar-mode 1)
 
@@ -39,10 +25,6 @@
 
 ;;; nlinum mode
 (global-nlinum-mode 1)
-
-;;; powerline
-(require 'powerline)
-(powerline-default-theme)
 
 
 ;;; Enlève la barre de défilement
