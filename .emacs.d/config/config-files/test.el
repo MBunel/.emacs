@@ -1,3 +1,9 @@
+;;; Configuration flycheck
+(load-file "~/.emacs.d/manual-install/flycheck-grammalecte/flycheck-grammalecte.el")
+
+(defun flycheck-gramalecte ()
+  (flycheck-select-checker 'francais-grammalecte)
+  (flycheck-mode))
 
 ;;; Configuration tabbar
 (tabbar-mode 1)
@@ -31,12 +37,3 @@
 (scroll-bar-mode -1)
 
 
-;;; Configuration flycheck
-(load-file "~/.emacs.d/manual-install/flycheck-grammalecte/flycheck-grammalecte.el")
-
-(defun flycheck-gramalecte ()
-  (flycheck-select-checker 'francais-grammalecte)
-  (flycheck-mode))
-
-;;; Configuration org
-(add-hook 'org-mode-hook 'flycheck-gramalecte)
