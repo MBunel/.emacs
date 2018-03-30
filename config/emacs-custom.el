@@ -9,7 +9,7 @@
  '(global-ede-mode t)
  '(package-selected-packages
    (quote
-    (magit company-irony company irony nlinum zenburn-theme))))
+    (irony-eldoc flycheck-irony magit company-irony company irony nlinum zenburn-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
