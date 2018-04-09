@@ -22,3 +22,6 @@
 
 ;; Documentation avec ElDoc
 (add-hook 'irony-mode-hook #'irony-eldoc)
+
+;; Racourci compilation
+(global-set-key (kbd "C-x c") 'compile)
