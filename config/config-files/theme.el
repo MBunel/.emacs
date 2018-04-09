@@ -6,3 +6,9 @@
 
 ;; Tool bar
 (tool-bar-mode -1)
+
+;;Nlinum
+
+;;format
+(setq nlinum-format "%5d")
+(setq nlinum-highlight-current-line t)
