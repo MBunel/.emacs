@@ -5,4 +5,6 @@
   (setq neo-mode-line-type 'none)
   (setq neo-autorefresh t)
   (setq neo-window-width 35)
-  (setq neo-smart-open t))
+  (setq neo-smart-open t)
+  (setq neo-show-updir-line nil)
+  (setq neo-cwd-line-style 'button))
