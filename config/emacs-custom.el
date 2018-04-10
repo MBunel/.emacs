@@ -17,4 +17,5 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#3F3F3F" :foreground "#DCDCCC" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "DAMA" :family "Deja Vu Sans Mono"))))
  '(fringe ((t (:background "#3F3F3F" :foreground "#DCDCCC"))))
- '(linum ((t (:background "#3F3F3F" :distant-foreground "nil" :foreground "#9FC59F" :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 1.0 :width normal :foundry "regular"))) nil "Style for nlium"))
+ '(linum ((t (:background "#3F3F3F" :distant-foreground "nil" :foreground "#9FC59F" :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 1.0 :width normal :foundry "regular"))) nil "Style for nlium")
+ '(vertical-border ((t (:foreground "#4F4F4F")))))
