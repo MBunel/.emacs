@@ -25,3 +25,9 @@
 
 ;; Racourci compilation
 (global-set-key (kbd "C-x c") 'compile)
+
+;; clang format
+(eval-after-load 'c++-mode
+  (lambda nil
+    (require 'clang-format)
+    (define-key c++-mode-map (kbd "<tab>") 'clang-format-region)))
