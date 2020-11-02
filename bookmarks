@@ -1,0 +1,125 @@
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("package-manager.el"
+ (filename . "~/.emacs.d/config/config-files/package-manager.el")
+ (front-context-string . "(package-initial")
+ (rear-context-string . "/packages/\")))\n\n")
+ (position . 368))
+("cesures"
+ (filename . "~/Documents/Thèse/Manuscrit/src/Meta/config_cesures.tex")
+ (front-context-string . "\\hyphenation{%\nc")
+ (rear-context-string)
+ (position . 1))
+("chap6-sec3"
+ (filename . "~/Documents/Thèse/Manuscrit/src/Corps/Partie2/Chapitre6/Section3/section.tex")
+ (front-context-string . "\n\n% Décompositio")
+ (rear-context-string . " d'intersection.")
+ (position . 2801))
+("debug"
+ (filename . "~/Documents/Thèse/Manuscrit/src/Meta/prembule_debug.tex")
+ (front-context-string . "%%%%%%%%%%%%%%%%")
+ (rear-context-string)
+ (position . 1))
+("chap6-sec1"
+ (filename . "~/Documents/Thèse/Manuscrit/src/Corps/Partie2/Chapitre6/Section1/section.tex")
+ (front-context-string . "\n\\tdi{On veut un")
+ (rear-context-string)
+ (position . 1))
+("chap5-sec2"
+ (filename . "~/Documents/Thèse/Manuscrit/src/Corps/Partie2/Chapitre5/Section2/section.tex")
+ (front-context-string . "\n\\subsection{Ret")
+ (rear-context-string)
+ (position . 1))
+("chap5-int"
+ (filename . "~/Documents/Th\303\250se/Manuscrit/src/Corps/Partie2/Chapitre5/introduction.tex")
+ (front-context-string)
+ (rear-context-string)
+ (position . 1))
+("chap5-sec1"
+ (filename . "~/Documents/Thèse/Manuscrit/src/Corps/Partie2/Chapitre5/Section1/section.tex")
+ (front-context-string)
+ (rear-context-string . " localisation}}\n")
+ (position . 63))
+("chap4-sec2"
+ (filename . "~/Documents/Thèse/Manuscrit/src/Corps/Partie2/Chapitre4/Section2/section.tex")
+ (front-context-string . "Dans le \\autoref")
+ (rear-context-string)
+ (position . 1))
+(".emacs-centaur"
+ (filename . "~/.emacs.d/config/config-files/centaur.el")
+ (front-context-string . "(require 'centau")
+ (rear-context-string)
+ (position . 1))
+("chap4-sec1"
+ (filename . "~/Documents/Thèse/Manuscrit/src/Corps/Partie2/Chapitre4/Section1/section.tex")
+ (front-context-string . "\n\\subsection{Pri")
+ (rear-context-string)
+ (position . 1))
+("main"
+ (filename . "~/Documents/Thèse/Manuscrit/src/main.tex")
+ (front-context-string . "\n\n% Annexes\n\\app")
+ (rear-context-string . "{plan_corps.tex}")
+ (position . 660))
+("part1-cnc"
+ (filename . "~/Documents/Thèse/Manuscrit/src/Corps/Partie1/conclusion_partie.tex")
+ (front-context-string . "Texte de conclus")
+ (rear-context-string)
+ (position . 1))
+("part1-int"
+ (filename . "~/Documents/Thèse/Manuscrit/src/Corps/Partie1/introduction_partie.tex")
+ (front-context-string . "Ici il faudra me")
+ (rear-context-string)
+ (position . 1))
+("glossaire_def.tex"
+ (filename . "~/Documents/Thèse/Manuscrit/src/Annexes/Glossaire/glossaire_def.tex")
+ (front-context-string . "curité en montag")
+ (rear-context-string . "publicaine de sé")
+ (position . 615))
+("bibliographie.bib"
+ (filename . "~/Documents/Thèse/Manuscrit/src/Annexes/Bibliographie/bibliographie.bib")
+ (front-context-string . "\n}\n\n@InBook{Aiel")
+ (rear-context-string . " = {2018-09-20},")
+ (position . 582))
+("chap3-sec2"
+ (filename . "~/Documents/Thèse/Manuscrit/src/Corps/Partie1/Chapitre3/Section2/section.tex")
+ (front-context-string . "Lorsque George P")
+ (rear-context-string)
+ (position . 1))
+("chap3-sec1"
+ (filename . "~/Documents/Thèse/Manuscrit/src/Corps/Partie1/Chapitre3/Section1/section.tex")
+ (front-context-string . "\\subsection{Élém")
+ (rear-context-string)
+ (position . 2))
+("chap2-sec2"
+ (filename . "~/Documents/Thèse/Manuscrit/src/Corps/Partie1/Chapitre2/Section2/section.tex")
+ (front-context-string . " \n\n%%% Local Var")
+ (rear-context-string . "tion,} ou les or")
+ (position . 445))
+("prembule.tex"
+ (filename . "~/Documents/Thèse/Manuscrit/src/Meta/prembule.tex")
+ (front-context-string . "\\usepackage{amsm")
+ (rear-context-string)
+ (position . 1))
+(".emacs-latex"
+ (filename . "~/.emacs.d/config/config-files/latex.el")
+ (front-context-string . "(require 'auctex")
+ (rear-context-string)
+ (position . 1))
+("chap2-intro"
+ (filename . "~/Documents/Thèse/Manuscrit/src/Corps/Partie1/Chapitre2/introduction.tex")
+ (front-context-string . "Comme nous l'avo")
+ (rear-context-string)
+ (position . 1))
+("chap2-sec1"
+ (filename . "~/Documents/Thèse/Manuscrit/src/Corps/Partie1/Chapitre2/Section1/section.tex")
+ (front-context-string . "Nous avons ident")
+ (rear-context-string)
+ (position . 1))
+("chap1-sec1"
+ (filename . "~/Documents/Thèse/Manuscrit/src/Corps/Partie1/Chapitre1/Section1/section.tex")
+ (front-context-string . "L'objectif de ce")
+ (rear-context-string)
+ (position . 1))
+)
