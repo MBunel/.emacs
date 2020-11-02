@@ -1,5 +1,5 @@
 ;; Chargement du theme
-(load-theme 'zenburn t)
+(load-theme 'nord t)
 
 ;; Enlève la barre de défilement
 (scroll-bar-mode -1)
